@@ -5,9 +5,9 @@ kcov_deps=libdw-dev libelf-dev elfutils libcurl4-openssl-dev python-pip python3 
 .PHONY: prepare_environment
 
 build:
+	mkdir -p build
+	cd build && cmake ..
 	make -C build
-	cmake ..
-	make
 
 run-tests: build
 	kcov /tmp/kcov build/calc 1+1
