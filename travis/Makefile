@@ -19,7 +19,7 @@ run-tests-gcc: run-tests
 run-tests-clang:
 
 prepare_linux:
-	sudo apt-get update -qq
+	sudo apt-get update -y
 	sudo apt-get install -y ${kcov_deps} gcc-multilib debootstrap git time wget
 	wget https://github.com/SimonKagstrom/kcov/archive/master.tar.gz
 	sh -c "tar xzf master.tar.gz && mkdir kcov-master/build && cd kcov-master/build && cmake .. && make && sudo make install"
