@@ -14,7 +14,7 @@ run-tests: build run-tests-${CC}
 run-tests-gcc: run-tests
 	kcov /tmp/kcov build/calc 1+1
 	kcov /tmp/kcov build/calc -h 9-99
-	kcov --coveralls-id=$(TRAVIS_JOB_ID) /tmp/kcov build/calc -h 9-99
+	kcov --coveralls-id=$(TRAVIS_JOB_ID) /tmp/kcov build/calc -h 9^3
 
 run-tests-clang:
 
