@@ -307,6 +307,8 @@ int main(int argc, char **argv)
 	  int i;
 
 	  /* Binary special case */
+	  printf("   3           2            1            \n");
+	  printf("  1098 7654 3210 9876 5432 1098 7654 3210\n");
 	  printf("0b");
 	  for (i=31; i>=0; i--)
 	    {
