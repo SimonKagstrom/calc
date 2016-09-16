@@ -23,6 +23,9 @@ env:
 
 script: make -f travis/Makefile run-tests
 
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -s /tmp/kcov
+
 notifications:
   recipients:
     - simon.kagstrom@gmail.com
