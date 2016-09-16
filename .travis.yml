@@ -21,16 +21,6 @@ env:
    #   via the "travis encrypt" command using the project repo's public key
    - secure: "WG/iday4nudNJ9acP/gjjuXzI0Jw0MN0zP9JA3WueMvMV0UrVRnBKM+papB06XiB4Gyiaoy92pfOGzmby0ciMAvydBn2DyuGZhM1nXuEIbkQqfP3AR3z6nCZHY27NAhVnpnEAyb56FwD353JMVZj34cnRmcjgKArMM3Y8W66Zls="
 
-addons:
-  coverity_scan-disabled:
-    project:
-      name: "SimonKagstrom/kcov"
-      description: "code coverage"
-    notification_email: simon.kagstrom@gmail.com
-    build_command_prepend: "mkdir -p coverity-build && cd coverity-build && cmake .. && cd .."
-    build_command:   "travis/coverity-build.sh"
-    branch_pattern: master
-
 script: make -f travis/Makefile run-tests
 
 notifications:
