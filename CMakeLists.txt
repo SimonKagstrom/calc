@@ -8,4 +8,5 @@ add_executable(calc
 	src/calc.c
 	src/precedence.c
 	src/stk.c
+	src/stk.h
 )
